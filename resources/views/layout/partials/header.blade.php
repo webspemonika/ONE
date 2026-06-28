@@ -1,127 +1,147 @@
- <!-- Navbar -->
- <nav class="px-0 mx-4 shadow-none navbar navbar-main navbar-expand-lg border-radius-xl" id="navbarBlur"
-     navbar-scroll="true">
-     <div class="px-3 py-1 container-fluid">
-         <nav aria-label="breadcrumb">
-             <ol class="px-0 pt-1 pb-0 mb-0 bg-transparent breadcrumb me-sm-6 me-5">
-                 <li class="text-sm breadcrumb-item"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-                 <li class="text-sm breadcrumb-item text-dark active" aria-current="page">Dashboard</li>
-             </ol>
-             <h6 class="mb-0 font-weight-bolder">Dashboard</h6>
-         </nav>
-         <div class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4" id="navbar">
-             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                 <div class="input-group input-group-outline">
-                     <label class="form-label">Type here...</label>
-                     <input type="text" class="form-control">
-                 </div>
-             </div>
-             <ul class="navbar-nav justify-content-end">
-                 <li class="nav-item d-flex align-items-center">
-                     <a href="javascript:;" class="px-0 nav-link text-body font-weight-bold">
-                         <i class="fa fa-user me-sm-1"></i>
-                         <span class="d-sm-inline d-none">Sign In</span>
-                     </a>
-                 </li>
-                 <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-                     <a href="javascript:;" class="p-0 nav-link text-body" id="iconNavbarSidenav">
-                         <div class="sidenav-toggler-inner">
-                             <i class="sidenav-toggler-line"></i>
-                             <i class="sidenav-toggler-line"></i>
-                             <i class="sidenav-toggler-line"></i>
-                         </div>
-                     </a>
-                 </li>
-                 <li class="px-3 nav-item d-flex align-items-center">
-                     <a href="javascript:;" class="p-0 nav-link text-body">
-                         <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
-                     </a>
-                 </li>
-                 <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                     <a href="javascript:;" class="p-0 nav-link text-body" id="dropdownMenuButton"
-                         data-bs-toggle="dropdown" aria-expanded="false">
-                         <i class="cursor-pointer fa fa-bell"></i>
-                     </a>
-                     <ul class="px-2 py-3 dropdown-menu dropdown-menu-end me-sm-n4"
-                         aria-labelledby="dropdownMenuButton">
-                         <li class="mb-2">
-                             <a class="dropdown-item border-radius-md" href="javascript:;">
-                                 <div class="py-1 d-flex">
-                                     <div class="my-auto">
-                                         <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 ">
-                                     </div>
-                                     <div class="d-flex flex-column justify-content-center">
-                                         <h6 class="mb-1 text-sm font-weight-normal">
-                                             <span class="font-weight-bold">New message</span> from Laur
-                                         </h6>
-                                         <p class="mb-0 text-xs text-secondary">
-                                             <i class="fa fa-clock me-1"></i>
-                                             13 minutes ago
-                                         </p>
-                                     </div>
-                                 </div>
-                             </a>
-                         </li>
-                         <li class="mb-2">
-                             <a class="dropdown-item border-radius-md" href="javascript:;">
-                                 <div class="py-1 d-flex">
-                                     <div class="my-auto">
-                                         <img src="../assets/img/small-logos/logo-spotify.svg"
-                                             class="avatar avatar-sm bg-gradient-dark me-3 ">
-                                     </div>
-                                     <div class="d-flex flex-column justify-content-center">
-                                         <h6 class="mb-1 text-sm font-weight-normal">
-                                             <span class="font-weight-bold">New album</span> by Travis Scott
-                                         </h6>
-                                         <p class="mb-0 text-xs text-secondary">
-                                             <i class="fa fa-clock me-1"></i>
-                                             1 day
-                                         </p>
-                                     </div>
-                                 </div>
-                             </a>
-                         </li>
-                         <li>
-                             <a class="dropdown-item border-radius-md" href="javascript:;">
-                                 <div class="py-1 d-flex">
-                                     <div class="my-auto avatar avatar-sm bg-gradient-secondary me-3">
-                                         <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                             <title>credit-card</title>
-                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                 <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
-                                                     fill-rule="nonzero">
-                                                     <g transform="translate(1716.000000, 291.000000)">
-                                                         <g transform="translate(453.000000, 454.000000)">
-                                                             <path class="color-background"
-                                                                 d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                                                 opacity="0.593633743"></path>
-                                                             <path class="color-background"
-                                                                 d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
-                                                             </path>
-                                                         </g>
-                                                     </g>
-                                                 </g>
-                                             </g>
-                                         </svg>
-                                     </div>
-                                     <div class="d-flex flex-column justify-content-center">
-                                         <h6 class="mb-1 text-sm font-weight-normal">
-                                             Payment successfully completed
-                                         </h6>
-                                         <p class="mb-0 text-xs text-secondary">
-                                             <i class="fa fa-clock me-1"></i>
-                                             2 days
-                                         </p>
-                                     </div>
-                                 </div>
-                             </a>
-                         </li>
-                     </ul>
-                 </li>
-             </ul>
-         </div>
-     </div>
- </nav>
- <!-- End Navbar -->
+<nav class="flex-row p-0 navbar col-lg-12 col-12 fixed-top d-flex">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="../../index.html"><img src="{{ asset('assets/images/logo.svg') }}" alt="logo"></a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="{{ asset('assets/images/logo-mini.svg') }}" alt="logo"></a>
+          <button class="navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav mr-lg-2">
+            <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link" href="#">
+                Calendar
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link active" href="#">
+                Statistic
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link" href="#">
+                Employee
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="mr-2 nav-item d-none d-lg-flex">
+              <a class="nav-link" href="#">
+                Help
+              </a>
+            </li>
+            <li class="nav-item dropdown d-flex">
+              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+                <i class="typcn typcn-message-typing"></i>
+                <span class="count bg-success">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <p class="float-left mb-0 font-weight-normal dropdown-header">Messages</p>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="flex-grow preview-item-content">
+                    <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                    </h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      The meeting is cancelled
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="flex-grow preview-item-content">
+                    <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                    </h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      New product launch
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="flex-grow preview-item-content">
+                    <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                    </h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      Upcoming board meeting
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown d-flex">
+              <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <i class="mr-0 typcn typcn-bell"></i>
+                <span class="count bg-danger">2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <p class="float-left mb-0 font-weight-normal dropdown-header">Notifications</p>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mx-0 typcn typcn-info-large"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      Just now
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mx-0 typcn typcn-cog"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">Settings</h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      Private message
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mx-0 typcn typcn-user-outline"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                    <p class="mb-0 font-weight-light small-text">
+                      2 days ago
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item nav-profile dropdown">
+              <a class="pl-0 pr-0 nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                <i class="mr-0 typcn typcn-user-outline"></i>
+                <span class="nav-profile-name">Evan Morales</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item">
+                <i class="typcn typcn-cog text-primary"></i>
+                Settings
+                </a>
+                <a class="dropdown-item">
+                <i class="typcn typcn-power text-primary"></i>
+                Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>

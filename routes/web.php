@@ -22,12 +22,11 @@ require __DIR__.'/auth.php';
 
 
 // admin route
-Route::group(
-    [
-    'middleware' => 'auth',
-    'prefix' => 'admin',
-    'as '=> 'admin.'
-], function(){
-Route::resource('feature' , FeatureController::class);
-}
-);
+Route::prefix('admin')
+    ->name('admin.')
+    ->middleware(['auth'])
+    ->group(function () {
+
+        Route::resource('feature', FeatureController::class);
+
+    });

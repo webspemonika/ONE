@@ -1,123 +1,140 @@
-<aside
-    class="my-3 border-0 sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl fixed-start ms-3 bg-gradient-dark"
-    id="sidenav-main">
-    <div class="sidenav-header">
-        <i class="top-0 p-3 text-white cursor-pointer fas fa-times opacity-5 position-absolute end-0 d-none d-xl-none"
-            aria-hidden="true" id="iconSidenav"></i>
-        <a class="m-0 navbar-brand" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
-            target="_blank">
-            <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="text-white ms-1 font-weight-bold"> Dashboard </span>
-        </a>
-    </div>
+     <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <div class="d-flex sidebar-profile">
+              <div class="sidebar-profile-image">
+                <img src="../../images/faces/face29.png" alt="image">
+                <span class="sidebar-status-indicator"></span>
+              </div>
+              <div class="sidebar-profile-name">
+                <p class="sidebar-name">
+                  Kenneth Osborne
+                </p>
+                <p class="sidebar-designation">
+                  Welcome
+                </p>
+              </div>
+            </div>
+            <div class="nav-search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Type to search..." aria-label="search" aria-describedby="search">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="search">
+                    <i class="typcn typcn-zoom"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="sidebar-menu-title">  Sections  </p>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+              <i class="typcn typcn-device-desktop menu-icon"></i>
+              <span class="menu-title">Dashboard <span class="ml-3 badge badge-primary">New</span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="typcn typcn-briefcase menu-icon"></i>
+              <span class="menu-title">  Hero </span>
+              <i class="typcn typcn-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
+              </ul>
+            </div>
+          </li>
 
-    <hr class="mt-0 mb-2 horizontal light">
-    <div class="w-auto collapse navbar-collapse max-height-vh-100" id="sidenav-collapse-main">
-        <ul class="navbar-nav">
-            {{--  1: dashboard   --}}
-            <li class="nav-item">
-                <a class="text-white nav-link active bg-gradient-primary" href="../pages/dashboard.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">dashboard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Dashboard</span>
-                </a>
-            </li>
-            <hr class="mt-4 horizontal light">
-            {{--  2: sections   --}}
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="typcn typcn-film menu-icon"></i>
+              <span class="menu-title"> Feature  </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="../../pages/forms/basic_elements.html">Basic Elements</a></li>
+              </ul>
+            </div>
+          </li>
 
-            <li class="mt-3 nav-item">
-                <h6 class="text-xs text-white ps-4 ms-2 text-uppercase font-weight-bolder opacity-8"> Sections </h6>
-            </li>
-
-
-
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/tables.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">table_view</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Hero </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/billing.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">receipt_long</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Feature </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/virtual-reality.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">view_in_ar</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Education & Experience </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/rtl.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Skills </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/notifications.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">notifications</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Project Demo </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/rtl.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Reviews </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/rtl.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Contact </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/rtl.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
-                    </div>
-                    <span class="nav-link-text ms-1"> Footer </span>
-                </a>
-            </li>
-<hr class="mt-4 horizontal light">
-            <li class="mt-3 nav-item">
-                <h6 class="text-xs text-white ps-4 ms-2 text-uppercase font-weight-bolder opacity-8">Account pages</h6>
-            </li>
-            <hr class="mt-4 horizontal light">
-            <li class="nav-item">
-                <a class="text-white nav-link " href="../pages/profile.html">
-                    <div class="text-center text-white me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">person</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Profile</span>
-                </a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+              <span class="menu-title"> Education & Experience  </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/chartjs.html">ChartJs</a></li>
+              </ul>
+            </div>
+          </li>
 
 
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="typcn typcn-th-small-outline menu-icon"></i>
+              <span class="menu-title"> Skills  </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">Basic table</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="typcn typcn-compass menu-icon"></i>
+              <span class="menu-title"> Projects <span class="ml-3 badge badge-primary"> Demo </span></span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/mdi.html">Mdi icons</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="typcn typcn-user-add-outline menu-icon"></i>
+              <span class="menu-title"> Reviews </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="typcn typcn-globe-outline menu-icon"></i>
+              <span class="menu-title"> Contact </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/documentation/documentation.html">
+              <i class="typcn typcn-document-text menu-icon"></i>
+              <span class="menu-title"> Footer </span>
+            </a>
+          </li>
         </ul>
-    </div>
-    {{--  <div class="bottom-0 sidenav-footer position-absolute w-100 ">
-        <div class="mx-3">
-            <a class="mt-4 btn bg-gradient-primary w-100"
-                href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree"
-                type="button">Upgrade to pro</a>
-        </div>
-    </div>  --}}
-</aside>
+        
+      </nav>

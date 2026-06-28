@@ -49,78 +49,54 @@
 
 
 
-@extends('admin.layout.master')
+@extends('layout.auth')
 
 @section('content')
-    <!-- login Content -->
-    <main class="mt-0 main-content">
-        <section>
-            <div class="page-header min-vh-100">
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="top-0 my-auto text-center col-6 d-lg-flex d-none h-100 pe-0 position-absolute start-0 justify-content-center flex-column">
-                            <div class="m-3 position-relative bg-gradient-primary h-100 px-7 border-radius-lg d-flex flex-column justify-content-center"
-                                style="background-image: url('../assets/img/illustrations/illustration-signup.jpg'); background-size: cover;">
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
-                            <div class="card card-plain">
-                                <div class="card-header">
-                                    <h4 class="font-weight-bolder">Sign in</h4>
-                                    <p class="mb-0">Enter your email and password to log in </p>
-                                </div>
-                                <div class="card-body">
-                                    <form method="POST" action="{{ route('login') }}">
-                                        @csrf
-
-                                        <div class="mb-3 input-group input-group-outline">
-                                            <label class="form-label">Email Address</label>
-                                            <input type="email" name="email" value="{{ old('email') }}"
-                                                class="form-control" required>
-                                        </div>
-
-                                        @error('email')
-                                            <small class="text-danger">{{ $message }}</small>
-                                        @enderror
-
-                                        <div class="mb-3 input-group input-group-outline">
-                                            <label class="form-label">Password</label>
-                                            <input type="password" name="password" class="form-control" required>
-                                        </div>
-
-                                        @error('password')
-                                            <small class="text-danger">{{ $message }}</small>
-                                        @enderror
-
-                                        <div class="form-check form-check-info text-start ps-0">
-                                            <input class="form-check-input" type="checkbox" name="remember"
-                                                id="flexCheckDefault">
-
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Remember Me
-                                            </label>
-                                        </div>
-
-                                        <div class="text-center">
-                                            <button type="submit" class="mt-4 mb-0 btn btn-lg bg-gradient-primary w-100">
-                                                Sign In
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="px-1 pt-0 text-center card-footer px-lg-2">
-                                    <p class="mx-auto mb-2 text-sm">
-                                        Already have an account?
-                                        <a href="../pages/sign-in.html"
-                                            class="text-primary text-gradient font-weight-bold">Sign in</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+ <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="px-0 content-wrapper d-flex align-items-center auth">
+        <div class="mx-0 row w-100">
+          <div class="mx-auto col-lg-4">
+            <div class="px-4 py-5 text-left auth-form-light px-sm-5">
+              <div class="brand-logo">
+                <img src="../../images/logo.svg" alt="logo">
+              </div>
+              <h4>Hello! let's get started</h4>
+              <h6 class="font-weight-light">Sign in to continue.</h6>
+              <form class="pt-3">
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
                 </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
+                </div>
+                <div class="my-2 d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input">
+                      Keep me signed in
+                    <i class="input-helper"></i></label>
+                  </div>
+                  <a href="#" class="text-black auth-link">Forgot password?</a>
+                </div>
+                <div class="mb-2">
+                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
+                    <i class="mr-2 typcn typcn-social-facebook-circular"></i>Connect using facebook
+                  </button>
+                </div>
+                <div class="mt-4 text-center font-weight-light">
+                  Don't have an account? <a href="register.html" class="text-primary">Create</a>
+                </div>
+              </form>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
 @endsection

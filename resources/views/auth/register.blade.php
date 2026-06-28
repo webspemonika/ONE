@@ -1,113 +1,54 @@
-{{--  <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
-
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block w-full mt-1" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block w-full mt-1"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block w-full mt-1"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>  --}}
-
-  @extends('admin.layout.master')
-
-@section('content')
-
-<!-- login Content -->
-  <main class="mt-0 main-content">
-    <section>
-      <div class="page-header min-vh-100">
-        <div class="container">
-          <div class="row">
-            <div class="top-0 my-auto text-center col-6 d-lg-flex d-none h-100 pe-0 position-absolute start-0 justify-content-center flex-column">
-              <div class="m-3 position-relative bg-gradient-primary h-100 px-7 border-radius-lg d-flex flex-column justify-content-center" style="background-image: url('../assets/img/illustrations/illustration-signup.jpg'); background-size: cover;">
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="px-0 content-wrapper d-flex align-items-center auth">
+        <div class="mx-0 row w-100">
+          <div class="mx-auto col-lg-4">
+            <div class="px-4 py-5 text-left auth-form-light px-sm-5">
+              <div class="brand-logo">
+                <img src="../../images/logo.svg" alt="logo">
               </div>
-            </div>
-            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
-              <div class="card card-plain">
-                <div class="card-header">
-                  <h4 class="font-weight-bolder">Sign Up</h4>
-                  <p class="mb-0">Enter your email and password to register</p>
+              <h4>New here?</h4>
+              <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+              <form class="pt-3">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
                 </div>
-                <div class="card-body">
-                  <form role="form">
-                    <div class="mb-3 input-group input-group-outline">
-                      <label class="form-label">Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3 input-group input-group-outline">
-                      <label class="form-label">Email</label>
-                      <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3 input-group input-group-outline">
-                      <label class="form-label">Password</label>
-                      <input type="password" class="form-control">
-                    </div>
-                    <div class="form-check form-check-info text-start ps-0">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
-                      <label class="form-check-label" for="flexCheckDefault">
-                        I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
-                      </label>
-                    </div>
-                    <div class="text-center">
-                      <button type="button" class="mt-4 mb-0 btn btn-lg bg-gradient-primary w-100">Sign Up</button>
-                    </div>
-                  </form>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
                 </div>
-                <div class="px-1 pt-0 text-center card-footer px-lg-2">
-                  <p class="mx-auto mb-2 text-sm">
-                    Already have an account?
-                    <a href="{{ route('login') }}" class="text-primary text-gradient font-weight-bold">Sign in</a>
-                  </p>
+                <div class="form-group">
+                  <select class="form-control form-control-lg" id="exampleFormControlSelect2">
+                    <option>Country</option>
+                    <option>United States of America</option>
+                    <option>United Kingdom</option>
+                    <option>India</option>
+                    <option>Germany</option>
+                    <option>Argentina</option>
+                  </select>
                 </div>
-              </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="mb-4">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input">
+                      I agree to all Terms &amp; Conditions
+                    <i class="input-helper"></i></label>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
+                </div>
+                <div class="mt-4 text-center font-weight-light">
+                  Already have an account? <a href="login.html" class="text-primary">Login</a>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-@endsection
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
