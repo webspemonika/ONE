@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Feature extends Model
+{
+  protected $fillable = [
+    "feature_title",
+    "feature_description",
+    "feature_icon"
+  ];
+
+}
