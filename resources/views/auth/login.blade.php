@@ -52,51 +52,56 @@
 @extends('layout.auth')
 
 @section('content')
- <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="px-0 content-wrapper d-flex align-items-center auth">
-        <div class="mx-0 row w-100">
-          <div class="mx-auto col-lg-4">
-            <div class="px-4 py-5 text-left auth-form-light px-sm-5">
-              <div class="brand-logo">
-                <img src="../../images/logo.svg" alt="logo">
-              </div>
-              <h4>Hello! let's get started</h4>
-              <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3">
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="px-0 content-wrapper d-flex align-items-center auth">
+                <div class="mx-0 row w-100">
+                    <div class="mx-auto col-lg-4">
+                        <div class="px-4 py-5 text-left auth-form-light px-sm-5">
+                            <div class="brand-logo">
+                                <img src="../../images/logo.svg" alt="logo">
+                            </div>
+                            <h4>Hello! let's get started</h4>
+                            <h6 class="font-weight-light">Sign in to continue.</h6>
+                            <form class="pt-3" method="POST" action="{{ route('login') }}">
+                                @csrf
+                                @if ($errors->any())
+                                    <div class="mt-3 alert alert-danger">
+                                        <ul class="mb-0">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                
+                                <div class="form-group">
+                                    <input type="email" name="email" value="{{ old('email') }}"
+                                        class="form-control form-control-lg" placeholder="Email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control form-control-lg"
+                                        placeholder="Password" required>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" name="remember" class="form-check-input" id="remember">
+                                    <label class="form-check-label" for="remember">
+                                        Keep me signed in
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-block btn-primary btn-lg auth-form-btn">
+                                    SIGN IN
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
-                </div>
-                <div class="my-2 d-flex justify-content-between align-items-center">
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      Keep me signed in
-                    <i class="input-helper"></i></label>
-                  </div>
-                  <a href="#" class="text-black auth-link">Forgot password?</a>
-                </div>
-                <div class="mb-2">
-                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                    <i class="mr-2 typcn typcn-social-facebook-circular"></i>Connect using facebook
-                  </button>
-                </div>
-                <div class="mt-4 text-center font-weight-light">
-                  Don't have an account? <a href="register.html" class="text-primary">Create</a>
-                </div>
-              </form>
             </div>
-          </div>
+            <!-- content-wrapper ends -->
         </div>
-      </div>
-      <!-- content-wrapper ends -->
+        <!-- page-body-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-  </div>
 @endsection

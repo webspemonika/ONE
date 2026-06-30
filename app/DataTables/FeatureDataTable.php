@@ -19,13 +19,29 @@ class FeatureDataTable extends DataTable
      *
      * @param QueryBuilder<Feature> $query Results from query() method.
      */
-    public function dataTable(QueryBuilder $query): EloquentDataTable
-    {
-        return (new EloquentDataTable($query))
-            ->addColumn('action', 'feature.action')
-            ->setRowId('id');
-    }
+  public function dataTable(QueryBuilder $query): EloquentDataTable
+{
+    return (new EloquentDataTable($query))
+        ->addIndexColumn()
 
+        ->editColumn('feature_icon', function ($query) {
+
+            return '<img src="'.asset($query->feature_icon).'"  style="object-fit:cover;width:100px;height:100px;border-radius:5px;">';
+
+        })
+
+        ->addColumn('action', function($query){
+            return '<a href="'.route('admin.feature.edit', $query->id).'" class="btn btn-secondary">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <a href="'.route('admin.feature.destroy', $query->id).'" class="btn btn-danger delete-item">
+                        <i class="fas fa-trash"></i>
+                    </a>';
+        })
+
+        ->rawColumns(['feature_icon','action']);
+}
     /**
      * Get the query source of dataTable.
      *
@@ -45,7 +61,7 @@ class FeatureDataTable extends DataTable
                     ->setTableId('feature-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    ->orderBy(1)
+                    ->orderBy(1, 'desc')
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -63,16 +79,23 @@ class FeatureDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+
+    Column::computed('DT_RowIndex')
+        ->title('SL')
+        ->searchable(false)
+        ->orderable(false),
+
+    Column::make('feature_title'),
+    Column::make('feature_description'),
+    Column::make('feature_icon'),
+
+    Column::computed('action')
+        ->exportable(false)
+        ->printable(false)
+        ->width(200)
+        ->addClass('text-center'),
         ];
+
     }
 
     /**

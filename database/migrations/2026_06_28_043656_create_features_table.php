@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('feature_title')->nullable();
             $table->text('feature_description') ->nullable();
-            $table->text('featur_icon')->nullable();
+            $table->text('feature_icon')->nullable();
             $table->timestamps();
         });
     }

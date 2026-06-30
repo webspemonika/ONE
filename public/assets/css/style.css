@@ -1,0 +1,28 @@
+html,
+body {
+    height: 100%;
+}
+
+.container-scroller {
+    min-height: 100vh;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
+
+
+/* start  */
+/* Dropify Custom */
+.feature-dropify + .dropify-wrapper {
+    width: 3px;
+    margin: 0 auto;
+}
+/* end */
