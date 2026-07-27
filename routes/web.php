@@ -4,6 +4,7 @@
 use App\Http\Controllers\Admin\EducationHeaderController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
@@ -30,15 +31,15 @@ Route::prefix('admin')
     ->name('admin.')
     ->middleware(['auth'])
     ->group(function () {
-
+// 1. hero section
         Route::get('/hero/edit', [HeroController::class, 'edit'])
             ->name('hero.edit');
 
         Route::put('/hero/update', [HeroController::class, 'update'])
             ->name('hero.update');
-
+            Route::resource('social-link' , SocialLinkController::class);
+// 02. feature section
         Route::resource('feature', FeatureController::class);
-        // education section
+        //03 education section
         Route::resource('education-header' , EducationHeaderController::class);
-
     });

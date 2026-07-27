@@ -18,54 +18,58 @@ public function index(FeatureDataTable $dataTable)
     return $dataTable->render('admin.feature.index');
 }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-       return view('admin.feature.create');
+       return view('admin.feature.index');
     }
 
     /**
      * Store a newly created resource in storage.
      */
- public function store(Request $request)
+public function store(Request $request)
 {
     $request->validate([
         'feature_title' => 'required|max:200',
         'feature_description' => 'required|max:500',
-        'feature_icon' => 'nullable|image|mimes:jpg,jpeg,png|max:3000',
+        'feature_icon' => 'required|image|mimes:jpg,jpeg,png|max:3000',
     ]);
 
-    $data = [
-        'feature_title' => $request->feature_title,
-        'feature_description' => $request->feature_description,
-    ];
+    // Model Object তৈরি
+    $feature = new Feature();
 
-    // যদি Image Upload করা হয়
-    if ($request->hasFile('feature_icon')) {
+    // Value Assign
+    $feature->feature_title = $request->feature_title;
+    $feature->feature_description = $request->feature_description;
 
-        $image = $request->file('feature_icon');
-        $imageName = rand() . '_' . $image->getClientOriginalName();
-        $image->move(public_path('uploads'), $imageName);
 
-        $data['feature_icon'] = '/uploads/' . $imageName;
+
+// Image Upload
+if ($request->hasFile('feature_icon')) {
+
+    // পুরোনো Image Delete
+    if ($feature->feature_icon && File::exists(public_path($feature->feature_icon))) {
+        File::delete(public_path($feature->feature_icon));
     }
 
-    Feature::create($data);
+    // নতুন Image Upload
+    $image = $request->file('feature_icon');
+    $imageName = rand() . '_' . $image->getClientOriginalName();
+
+    $image->move(public_path('uploads/feature'), $imageName);
+
+    $feature->feature_icon = 'uploads/feature/' . $imageName;
+}
+
+    // Database-এ Save
+    $feature->save();
 
     return redirect()
         ->route('admin.feature.index')
         ->with('success', 'Created Successfully');
 }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -80,7 +84,7 @@ public function edit(string $id)
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+public function update(Request $request, string $id)
 {
     $request->validate([
         'feature_title' => 'required|max:200',
@@ -88,13 +92,14 @@ public function edit(string $id)
         'feature_icon' => 'nullable|image|mimes:jpg,jpeg,png|max:3000',
     ]);
 
+    // Model Find
     $feature = Feature::findOrFail($id);
 
-    $data = [
-        'feature_title' => $request->feature_title,
-        'feature_description' => $request->feature_description,
-    ];
+    // Value Assign
+    $feature->feature_title = $request->feature_title;
+    $feature->feature_description = $request->feature_description;
 
+    // Image Upload
     if ($request->hasFile('feature_icon')) {
 
         if ($feature->feature_icon && File::exists(public_path($feature->feature_icon))) {
@@ -105,10 +110,11 @@ public function edit(string $id)
         $imageName = rand() . '_' . $image->getClientOriginalName();
         $image->move(public_path('uploads'), $imageName);
 
-        $data['feature_icon'] = '/uploads/' . $imageName;
+        $feature->feature_icon = '/uploads/' . $imageName;
     }
 
-    $feature->update($data);
+    // Database Update
+    $feature->save();
 
     return redirect()
         ->route('admin.feature.index')
@@ -130,10 +136,7 @@ public function edit(string $id)
     // Database থেকে Delete
     $feature->delete();
 
-    // return response()->json([
-    //     'status' => 'success',
-    //     'message' => 'Deleted Successfully',
-    // ]);
+
 }
 
 }

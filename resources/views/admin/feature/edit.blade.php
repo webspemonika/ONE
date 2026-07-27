@@ -17,6 +17,8 @@
 
                 @include('admin.feature.partials.form')
 
+
+            
                 <div class="mt-3">
                     <button type="submit" class="btn btn-warning">
                         <i class="fa-solid fa-pen"></i>
@@ -37,12 +39,4 @@
 @endsection
 
 
-@push('scripts')
-<script>
-    $('.dropify').dropify();
 
-    $('#description').summernote({
-        height: 200
-    });
-</script>
-@endpush

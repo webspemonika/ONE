@@ -10,7 +10,8 @@
 
             <form action="{{ route('admin.feature.store') }}"
                   method="POST"
-                  enctype="multipart/form-data">
+                  enctype="multipart/form-data" 
+            >
 
                 @csrf
 
@@ -29,20 +30,11 @@
 
 @endsection
 
-@push('scripts')
-    <script>
-        $(document).ready(function() {
-            $('#description').summernote({
-                height: 250,
-                placeholder: 'Write feature description...'
-            });
-        });
-    </script>
-@endpush
-@push('scripts')
-    <script>
-        $(document).ready(function() {
-            $('.dropify').dropify();
-        });
-    </script>
-@endpush
+
+
+
+
+
+
+
+

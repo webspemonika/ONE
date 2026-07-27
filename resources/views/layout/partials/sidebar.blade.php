@@ -43,7 +43,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.hero.edit') }}"> Hero Contents </a></li>
                 <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html"> Type Writter </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html"> Social Links </a></li>
+                <li class="nav-item"><a class="nav-link"  href="{{ route('admin.social-link.index') }}">Social Links</a></li>
               </ul>
             </div>
           </li>
