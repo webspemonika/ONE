@@ -14,9 +14,14 @@
             >
 
                 @csrf
+
                 @if ($socialLink->exists)
                     @method('PUT')
                 @endif
+
+
+
+
 
                 {{-- Title --}}
                 <div class="mb-3 form-group">
@@ -36,7 +41,7 @@
                         type="text"
                         name="facebook_url"
                         class="form-control"
-                        value="{{ old('facebook', $socialLink->facebook_url) }}"
+                        value="{{ old('facebook_url', $socialLink->facebook_url) }}"
                     >
                 </div>
 
@@ -47,7 +52,7 @@
                         type="text"
                         name="whatsapp_url"
                         class="form-control"
-                        value="{{ old('whatsapp', $socialLink->whatsapp_url) }}"
+                        value="{{ old('whatsapp_url', $socialLink->whatsapp_url) }}"
                     >
                 </div>
 
@@ -58,7 +63,7 @@
                         type="text"
                         name="linkedin_url"
                         class="form-control"
-                        value="{{ old('linkedin', $socialLink->linkedin_url) }}"
+                        value="{{ old('linkedin_url', $socialLink->linkedin_url) }}"
                     >
                 </div>
 
@@ -69,7 +74,7 @@
                         type="text"
                         name="github_url"
                         class="form-control"
-                        value="{{ old('github', $socialLink->github_url) }}"
+                        value="{{ old('github_url', $socialLink->github_url) }}"
                     >
                 </div>
 

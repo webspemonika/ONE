@@ -1,9 +1,10 @@
 <?php
 
-
+use App\Http\Controllers\Admin\DesignSkillHeaderController;
 use App\Http\Controllers\Admin\EducationHeaderController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\SkillHeaderController;
 use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\ProfileController;
 
@@ -42,4 +43,9 @@ Route::prefix('admin')
         Route::resource('feature', FeatureController::class);
         //03 education section
         Route::resource('education-header' , EducationHeaderController::class);
+
+
+        // 04
+        Route::resource('skill-header' ,SkillHeaderController::class );
+        Route::resource('design-skill-header' , DesignSkillHeaderController::class);
     });
