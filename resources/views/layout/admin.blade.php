@@ -102,19 +102,12 @@
         <script src="{{ asset('assets/js/custom-js/delete-confirm.js') }}"></script>
         {{--    --}}
         {{--  <!-- Show dynamic validation errors -->  --}}
-        <script>
-            @if (!empty($errors->all()))
-                @foreach ($errors->all() as $error)
-                    toastr.error("{{ $error }}", )
-                @endforeach
-            @endif
-        </script>
-   <script>
+       <script>
 toastr.options = {
-    "closeButton": true,
-    "progressBar": true,
-    "positionClass": "toast-top-right",
-    "timeOut": "3000"
+    closeButton: true,
+    progressBar: true,
+    positionClass: "toast-top-right",
+    timeOut: "3000"
 };
 
 @if(session('success'))
@@ -139,6 +132,9 @@ toastr.options = {
     @endforeach
 @endif
 </script>
+
+
+
         {{--    --}}
         <script>
             $(document).ready(function() {

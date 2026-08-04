@@ -110,8 +110,7 @@ public function store(Request $request)
 
     $socialLink->save();
 
-    return redirect()->route('admin.social-link.index')
-        ->with('success', 'Social Link Created Successfully.');
+    return redirect()->route('admin.social-link.index')->with('success', 'Social Link Created Successfully.');
 }
 
 
@@ -139,7 +138,6 @@ public function store(Request $request)
 
         $socialLink->save();
 
-        return redirect()->route('admin.social-link.index')
-            ->with('success', 'Social Link Updated Successfully.');
+        return redirect()->route('admin.social-link.index')->with('success', 'Social Link Updated Successfully.');
     }
 }

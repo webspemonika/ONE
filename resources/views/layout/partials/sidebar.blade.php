@@ -157,9 +157,46 @@
                                  class="nav-link"
                                  href="{{ route('admin.skill-header.index') }}"
                              >
-                                 Skill Header
+                                 Skill Section  Header
                              </a>
                          </li>
+                         {{--    --}}
+                         <li class="nav-item">
+                             <a
+                                 class="nav-link"
+                                 href="{{ route('admin.skill-header.index') }}"
+                             >
+                              Design  Skill Header
+                             </a>
+                         </li>
+                         {{--    --}}
+                         <li class="nav-item">
+                             <a
+                                 class="nav-link"
+                                 href="{{ route('admin.skill-header.index') }}"
+                             >
+                              Design  Skills
+                             </a>
+                         </li>
+                         {{--    --}}
+                          <li class="nav-item">
+                             <a
+                                 class="nav-link"
+                                 href="{{ route('admin.skill-header.index') }}"
+                             >
+                              Development Skill Header
+                             </a>
+                         </li>
+                         {{--    --}}
+                         <li class="nav-item">
+                             <a
+                                 class="nav-link"
+                                 href="{{ route('admin.skill-header.index') }}"
+                             >
+                              Design  Skills
+                             </a>
+                         </li>
+                         {{--  end  --}}
                      </ul>
                  </div>
              </li>
