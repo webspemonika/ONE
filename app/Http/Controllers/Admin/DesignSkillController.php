@@ -34,13 +34,10 @@ class DesignSkillController extends Controller
 
         return redirect()
             ->route('admin.design-skill.index')
-            ->with('success', 'Created Successfully');
+            ->with('success', 'DesignSkill Created Successfully');
     }
 
-    public function show(DesignSkill $designSkill)
-    {
-        return view('admin.design-skill.show', compact('designSkill'));
-    }
+ 
 
     public function edit(DesignSkill $designSkill)
     {
@@ -61,7 +58,7 @@ class DesignSkillController extends Controller
 
         return redirect()
             ->route('admin.design-skill.index')
-            ->with('success', 'Updated Successfully');
+            ->with('success', 'DesignSkill Updated Successfully');
     }
 
 public function destroy(string $id)
@@ -76,6 +73,6 @@ public function destroy(string $id)
     // ajax request a form submit korla ................
      return redirect()
         ->route('admin.design-skill.index')
-        ->with('success', 'Deleted Successfully');
+        ->with('success', 'Design Skill Deleted Successfully');
 }
 }

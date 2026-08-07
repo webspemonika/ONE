@@ -74,7 +74,7 @@
                              > Hero Contents </a></li>
                          <li class="nav-item"> <a
                                  class="nav-link"
-                                 href="../../pages/ui-features/dropdowns.html"
+                                 href="{{ route('admin.type-writer.index') }}"
                              > Type Writter </a></li>
                          <li class="nav-item"><a
                                  class="nav-link"

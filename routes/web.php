@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\SkillHeaderController;
 use App\Http\Controllers\Admin\SocialLinkController;
+use App\Http\Controllers\Admin\TypeWriterController;
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,7 @@ Route::prefix('admin')
         Route::put('/hero/update', [HeroController::class, 'update'])
             ->name('hero.update');
             Route::resource('social-link' , SocialLinkController::class);
+            Route::resource('type-writer' , TypeWriterController::class);
 // 02. feature section
         Route::resource('feature', FeatureController::class);
         //03 education section

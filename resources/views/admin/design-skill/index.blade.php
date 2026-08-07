@@ -90,13 +90,18 @@
                             </tr>
 
                         @empty
+
                             <tr>
+
                                 <td
                                     colspan="4"
                                     class="text-center"
                                 >
+
                                     No Data Found
+
                                 </td>
+
                             </tr>
                         @endforelse
 
@@ -118,11 +123,7 @@
 
 
 @push('scripts')
-
-
     <script>
-
-        
         $('body').on('click', '.delete-item', function(e) {
             e.preventDefault();
 
@@ -132,9 +133,9 @@
             Swal.fire({
                     title: "Are you sure?",
                     text: "You won't be able to revert this!",
+                    confirmButtonText: "Yes, delete it!"
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonText: "Yes, delete it!"
 
 
                 })
@@ -159,9 +160,5 @@
 
                 });
         });
-
-
     </script>
-
-
 @endpush
