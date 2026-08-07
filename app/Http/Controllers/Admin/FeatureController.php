@@ -18,11 +18,10 @@ public function index(FeatureDataTable $dataTable)
     return $dataTable->render('admin.feature.index');
 }
 
-
-    public function create()
-    {
-       return view('admin.feature.index');
-    }
+public function create()
+{
+    return view('admin.feature.create');
+}
 
     /**
      * Store a newly created resource in storage.
@@ -135,7 +134,10 @@ public function update(Request $request, string $id)
 
     // Database থেকে Delete
     $feature->delete();
-
+  return response()->json([
+        'status' => 'success',
+        'message' => 'Deleted Successfully'
+    ]);
 
 }
 

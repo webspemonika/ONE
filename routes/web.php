@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DesignSkillController;
 use App\Http\Controllers\Admin\DesignSkillHeaderController;
 use App\Http\Controllers\Admin\EducationHeaderController;
 use App\Http\Controllers\Admin\FeatureController;
@@ -48,4 +49,6 @@ Route::prefix('admin')
         // 04
         Route::resource('skill-header' ,SkillHeaderController::class );
         Route::resource('design-skill-header' , DesignSkillHeaderController::class);
+        Route::resource('design-skill' ,DesignSkillController::class);
+
     });

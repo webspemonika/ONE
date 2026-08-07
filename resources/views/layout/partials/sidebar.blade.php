@@ -157,7 +157,7 @@
                                  class="nav-link"
                                  href="{{ route('admin.skill-header.index') }}"
                              >
-                                 Skill Section  Header
+                                 Skill Section Header
                              </a>
                          </li>
                          {{--    --}}
@@ -166,7 +166,16 @@
                                  class="nav-link"
                                  href="{{ route('admin.skill-header.index') }}"
                              >
-                              Design  Skill Header
+                                 Design Skill Header
+                             </a>
+                         </li>
+                         {{--    --}}
+                         <li class="nav-item">
+                             <a
+                                 class="nav-link"
+                                 href="{{ route('admin.design-skill.index') }}"
+                             >
+                                 Design Skills
                              </a>
                          </li>
                          {{--    --}}
@@ -175,16 +184,7 @@
                                  class="nav-link"
                                  href="{{ route('admin.skill-header.index') }}"
                              >
-                              Design  Skills
-                             </a>
-                         </li>
-                         {{--    --}}
-                          <li class="nav-item">
-                             <a
-                                 class="nav-link"
-                                 href="{{ route('admin.skill-header.index') }}"
-                             >
-                              Development Skill Header
+                                 Development Skill Header
                              </a>
                          </li>
                          {{--    --}}
@@ -193,7 +193,7 @@
                                  class="nav-link"
                                  href="{{ route('admin.skill-header.index') }}"
                              >
-                              Design  Skills
+                                 Design Skills
                              </a>
                          </li>
                          {{--  end  --}}

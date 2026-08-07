@@ -11,6 +11,7 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
+use Illuminate\Support\Str;
 
 class FeatureDataTable extends DataTable
 {
@@ -25,12 +26,14 @@ class FeatureDataTable extends DataTable
         ->addIndexColumn()
 
         ->editColumn('feature_icon', function ($query) {
-
-            return '<img src="'.asset($query->feature_icon).'"  style="object-fit:cover;width:100px;height:100px;border-radius:5px;">';
-
+            return '<img src="'.asset($query->feature_icon).'" style="object-fit:cover;width:100px;height:100px;border-radius:5px;">';
         })
 
-        ->addColumn('action', function($query){
+        ->editColumn('feature_description', function ($row) {
+            return Str::limit(strip_tags($row->feature_description), 80);
+        })
+
+        ->addColumn('action', function ($query) {
             return '<a href="'.route('admin.feature.edit', $query->id).'" class="btn btn-secondary">
                         <i class="fas fa-edit"></i>
                     </a>
@@ -40,9 +43,12 @@ class FeatureDataTable extends DataTable
                     </a>';
         })
 
-        ->rawColumns(['feature_icon','action']);
+        ->rawColumns(['feature_icon', 'action']);
 }
-    /**
+// use Illuminate\Support\Str;
+
+
+/**
      * Get the query source of dataTable.
      *
      * @return QueryBuilder<Feature>
